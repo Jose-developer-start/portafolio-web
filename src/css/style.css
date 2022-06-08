@@ -6,6 +6,17 @@
     font-family: 'Poppins', sans-serif;
 }
 /*CSS GLOBAL*/
+.btn{
+    width: 220px;
+    padding: 10px 20px;
+    background: #ffff;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.5s ease;
+    border: 1px solid #a7bb90;
+    background: none;
+    color: #fff;
+}
 .navbar__container{
     display: flex;
     justify-content: space-between;
@@ -32,8 +43,12 @@
     align-items: center;
     color: #f1f1f1;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
+    font-weight: 700;
+}
+.navbar__logo span{
+    color: #a7bb90;
 }
 .navbar__menu{
     display: flex;
@@ -145,6 +160,10 @@
 
 }
 
+.header__btn:hover{
+    background: #a7bb90;
+    color: #fff;
+}
 .header__content h1{
     color: #fff;
     font-size: 3.5rem;
@@ -156,6 +175,7 @@
 .header__content p{
     color: #f1f1f1;
     font-size: 1.5rem;
+    margin-bottom: 25px;
 }
 
 .header__img-container img{
@@ -214,12 +234,12 @@
     font-weight: 700;
     transition: all 0.3s ease;
     position: relative;
-    z-index: 999;
+    z-index: 2;
 }
 
 .button::after{
-    position: absolute;
     content: '';
+    position: absolute;
     top: 0;
     left: 0;
     width: 0;
@@ -228,10 +248,10 @@
     z-index: 1;
     transition: all 0.3s ease;
 }
-
-.button:hover:after{
+/*
+.button:hover::after{
     width: 100%;
-}
+}*/
 @media screen and (max-width: 960px){
     .about__content{
         margin: 0px;
@@ -307,7 +327,7 @@
 }
 .portafolio__card{
     position: relative;
-    width:450px;
+    width:350px;
     height: 100%;
     padding: 20px;
     box-shadow: 0px 0px 15px rgba(0,0,0,.1);
@@ -357,4 +377,83 @@
     .portafolio{
         padding: 0px 25px;
     }
+}
+
+/*Redes sociales estyle*/
+
+.redes{
+    padding: 3rem 5rem;
+    background: #fff;
+}
+.redes__title{
+    font-size: 2.8rem;
+    color: #506a85;
+    text-align: center;
+    padding: 20px 0px;
+}
+.redes__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes__card{
+    width: 350px;
+    padding: 25px 20px;
+    background: #f4f4f9;
+    margin: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    display: flex;
+    align-items: center;
+}
+.redes__icon img{
+    height: 60px;
+}
+.redes__info{
+    margin: 0 10px;
+}
+.redes__info h4{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Poppins',sans-serif;
+}
+.redes__info p,a{
+    font-size: 14px;
+    text-decoration: none;
+}
+@media screen and (max-width: 760px){
+    .redes{
+        padding: 50px 20px;
+    }
+    .redes__content{
+        flex-direction: column;
+    }
+    .redes__title{
+        font-size: 30px;
+    }
+}
+
+/*FOOTER CSS*/
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 5rem;
+    flex-direction: column;
+    background: #f4f4f9;
+}
+.footer__top h3{
+    color: #212121;
+}
+.footer__top span{
+    color: #a7bb90;
+}
+.footer__center{
+    margin-bottom: 1rem;
+}
+.footer__bottom p{
+    font-size: 14px;
+    color: #506a85;
 }
